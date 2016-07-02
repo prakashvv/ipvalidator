@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Machines</title>
+</head>
+<body>
+{% if machines %}
+    <ul>
+        {% for machine in machines %}
+        <li><a href="{% url 'interfaces' machine.id %}">{{ machine.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <h3>No machines</h3>
+{% endif %}
+</body>
+</html>
